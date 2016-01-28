@@ -1,0 +1,34 @@
+/*
+  Insert Node at a given position in a linked list 
+  head can be NULL 
+  First element in the linked list is at position 0
+  Node is defined as 
+  struct Node
+  {
+     int data;
+     struct Node *next;
+  }
+*/
+Node* InsertNth(Node *head, int data, int position)
+{
+  // Complete this method only
+  // Do not write main function. 
+   int n;
+   n = position;
+   struct Node* current = head;
+   struct Node* newnode = new Node();
+   newnode->data = data;
+   newnode->next = NULL; 
+   if(n == 0){
+       newnode->next =head;
+       head = newnode;
+   }
+    else{
+        for(int i=0;i<n-1;i++){
+            current=current->next;
+        }
+        newnode->next = current->next;
+        current->next= newnode;
+    }
+    return head;
+}
