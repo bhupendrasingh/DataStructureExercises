@@ -1,0 +1,13 @@
+def main():
+    n=int(input())
+    bigList = []
+    for i in range (n):
+        udata=input()
+        data=udata.split()
+        if(int(data[0]) == 1):
+            bigList.append(data[1])
+        if(int(data[0]) == 2):
+            bigList.pop()
+        if(int(data[0]) == 3):
+            print(max(bigList))          
+main()

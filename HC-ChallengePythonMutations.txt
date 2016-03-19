@@ -1,0 +1,8 @@
+def main():
+    mystr=input()
+    index_char=input().split()
+    l=list(mystr)
+    l[int(index_char[0])]=index_char[1]
+    mystr="".join(l)
+    print(mystr)
+main()
