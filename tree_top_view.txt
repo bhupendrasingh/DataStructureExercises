@@ -1,0 +1,28 @@
+/*
+   class Node 
+       int data;
+       Node left;
+       Node right;
+*/
+static int count =0;
+void top_view(Node root)
+{
+  if(root == null){
+      return;
+  }else{
+      if(root.left != null && count >=0){
+          count++;
+          top_view(root.left);
+      }
+      //if(root.left != null || root.right!= null){
+          System.out.print(root.data+" ");
+          count--;
+      //}
+      if(root.right!= null && count < 0){
+          count--;
+          top_view(root.right);
+      }
+      
+  }
+  
+}
